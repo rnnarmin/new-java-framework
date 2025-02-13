@@ -1,9 +1,8 @@
-package testdata;
+package TestDate;
 
 import Models.User;
 
 public class TestDate {
-
     public static final User DEFAULT_USER= User.builder()
             .username("username")
             .firstName("firstName")
