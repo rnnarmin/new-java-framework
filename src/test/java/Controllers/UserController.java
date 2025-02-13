@@ -5,19 +5,19 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import static Constants.CommonConstants.BASE_URI;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 
 public class UserController {
     RequestSpecification requestSpecification;
-    private static final String BASE_URL = "https://petstore.swagger.io/v2/";
     public static final String USER_ENDPOINT= "user";
 
     public UserController() {
         this.requestSpecification = given()
                 .accept(JSON)
                 .contentType(JSON)
-                .baseUri(BASE_URL);
+                .baseUri(BASE_URI);
     }
 
 
